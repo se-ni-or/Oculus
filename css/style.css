@@ -181,21 +181,12 @@ body {
   color: #070707;
 }
 
-.tabs__items {
-  /*transition: all 2s;*/
-}
-
-.tabs__content {
-  height: 318px;
-  overflow: hidden;
-}
-
 .tabs__content-item {
   display: grid;
   grid-template-columns: auto 280px;
   grid-template-rows: auto 150px;
   gap: 40px;
-  /*opacity: 0;*/
+  opacity: 0;
 }
 .tabs__content-item--active {
   opacity: 1;
