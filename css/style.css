@@ -180,6 +180,10 @@ body {
 .tabs__btn-item--active {
   color: #070707;
 }
+.tabs__content {
+  position: relative;
+  min-height: 300px;
+}
 
 .tabs__content-item {
   display: grid;
@@ -187,6 +191,8 @@ body {
   grid-template-rows: auto 150px;
   gap: 40px;
   opacity: 0;
+  position: absolute;
+  transition: opacity .3s ease;
 }
 .tabs__content-item--active {
   opacity: 1;
@@ -220,4 +226,127 @@ body {
 .video span {
   font-size: 13px;
   color: #F6F4F5;
+}
+/*-------------games---------------*/
+.game {
+  margin-bottom: 100px;
+}
+.game__title {
+  margin-bottom: 50px;
+}
+.game__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.game__descr {
+  padding-right: 10px;
+}
+.game__descr-title {
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.game__descr-text {
+  margin-bottom: 24px;
+}
+.game__link {
+  display: inline-block;
+  background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 16px 15px 12px;
+  width: 225px;
+  text-align: center;
+  border: 1px solid #BC10D8;
+}
+.game__item {
+  border: 1px solid #BC10D8;
+  padding: 10px 8px 18px;
+  display: flex;
+  flex-direction: column;
+}
+.game__item-img {
+  margin-bottom: 10px;
+}
+.game__item-title {
+font-size: 24px;
+  margin-bottom: 10px;
+}
+.game__item-text {
+  margin-bottom: 30px;
+}
+.game__item-link {
+  background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  margin-top: auto;
+}
+/*-------------buy---------------*/
+.buy {
+  margin-bottom: 110px;
+  text-align: center;
+  position: relative;
+  overflow-x:hidden ;/*убрали скролл*/
+}
+.buy__img {
+  margin-bottom: 30px;
+}
+.buy .buy-btn {
+  margin: 0 auto;
+}
+.buy__bg {
+  background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 400px;
+  line-height: 400px;
+  opacity: 0.1;
+  position: absolute;
+  z-index: -1;
+  animation: line-text 6s/*продолжительность*/
+             linear 1s/*задержка перед повторением*/
+             infinite/*повтор бесконечно*/;
+}
+@keyframes line-text {    /*анимация*/
+  from {
+    transform: translateX(100%);  /*начало*/
+    transform-origin: left center;
+  }
+  to {
+    transform: translateX(-100%);  /*окончание*/
+    transform-origin: right center;
+  }
+}
+/*-------------equipment---------------*/
+.equipment {
+  margin-bottom: 100px;
+}
+.equipment__title {
+  margin-bottom: 50px;
+}
+.equipment__box {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px 30px;
+}
+.equipment__box-img {
+  margin-bottom: 10px;
+}
+.equipment__box-title {
+  background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  font-size: 36px;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+.equipment__box-item-one {
+  grid-row: 1/-1;
 }
